@@ -1,6 +1,5 @@
 pipeline {
   agent any
-
   stages {
     stage('Build') {
       steps {
@@ -9,7 +8,7 @@ pipeline {
     }
     stage('Archive') {
       steps {
-        archiveArtifacts artifacts: 'zeppelin-distribution/target/*.tar.gz', fingerprint: true
+        archiveArtifacts(artifacts: 'zeppelin-distribution/target/*.tar.gz', fingerprint: true, onlyIfSuccessful: true)
       }
     }
   }
