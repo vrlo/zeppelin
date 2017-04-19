@@ -5,14 +5,12 @@ pipeline {
     jdk 'jdk7'
   }
   stages {
-    stage('Build') {
+    stage('Test tools') {
       steps {
-        sh 'mvn clean package -Pbuild-distr -DskipTests -Pdse-5.0.4'
+        sh 'javac -version'
       }
-    }
-    stage('Archive') {
       steps {
-        archiveArtifacts(artifacts: 'zeppelin-distribution/target/*.tar.gz', fingerprint: true, onlyIfSuccessful: true)
+        sh 'mvn --version'
       }
     }
   }
