@@ -4,6 +4,9 @@ pipeline {
     maven 'mvn-3'
     jdk 'jdk7'
   }
+  options {
+    buildDiscarder(logRotator(numToKeepStr:'3'))
+  }
   stages {
     stage('Build') {
       steps {
