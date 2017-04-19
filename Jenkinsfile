@@ -8,8 +8,6 @@ pipeline {
     stage('Test tools') {
       steps {
         sh 'javac -version'
-      }
-      steps {
         sh 'mvn --version'
       }
     }
