@@ -2,7 +2,7 @@ pipeline {
   agent any
   tools {
     maven 'mvn-3'
-    jdk 'jdk7'
+    jdk 'jdk8'
   }
   options {
     buildDiscarder(logRotator(numToKeepStr:'3'))
