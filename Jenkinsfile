@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean package -Pbuild-distr -DskipTests -Pdse-5.0.4'
+        sh 'mvn clean package -Pbuild-distr -DskipTests -Pdse-5.1.0'
       }
     }
     stage('Archive') {
