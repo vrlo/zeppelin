@@ -827,7 +827,7 @@
       <id>dse-5.0.4</id>
       <properties>
         <spark.version>1.6.2.2</spark.version>
-        <spark.py4j.version>0.9</spark.py4j.version>
+        <spark.py4j.version>0.10.3</spark.py4j.version>
         <hadoop.version>2.7.1</hadoop.version>
         <avro.mapred.classifier>hadoop1</avro.mapred.classifier>
         <akka.group>com.typesafe.akka</akka.group>
