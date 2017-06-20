@@ -10,7 +10,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean package -Pbuild-distr -DskipTests -Pdse-5.0.4'
+        sh './dev/change_scala_version.sh 2.11'
+        sh 'mvn clean package -Pbuild-distr -DskipTests -Pdse-5.1.1 -Pscala-2.11'
       }
     }
     stage('Archive') {
